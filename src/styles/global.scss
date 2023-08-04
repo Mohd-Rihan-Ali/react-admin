@@ -1,3 +1,6 @@
+@import "./variables.scss";
+@import "./responsive.scss";
+
 * {
   margin: 0;
   padding: 0;
@@ -7,4 +10,45 @@
 a {
   text-decoration: none;
   color: inherit;
+}
+
+.main {
+  background-color: $main-bg;
+  font-family: "Inter", sans-serif;
+  color: $main-color;
+}
+
+.container {
+  display: flex;
+
+  // @include xxl {
+  //   background-color: rgba(255, 238, 0, 0.129);
+  // }
+  // @include xl {
+  //   background-color: rgba(255, 0, 132, 0.129);
+  // }
+  // @include lg {
+  //   background-color: rgba(0, 166, 255, 0.129);
+  // }
+  // @include md {
+  //   background-color: rgba(174, 255, 0, 0.129);
+  // }
+  // @include sm {
+  //   background-color: rgba(255, 0, 0, 0.129);
+  // }
+}
+
+.menuContainer {
+  width: 200px;
+  padding: 5px 20px;
+  border-right: 2px solid $soft-bg;
+
+  @include lg {
+    width: max-content;
+  }
+}
+
+.contentContainer {
+  width: 100%; // in this way it will fit in the rest of the container
+  padding: 5px 20px;
 }
